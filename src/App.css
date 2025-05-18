@@ -1,0 +1,249 @@
+/* Styling Global untuk Body: Gradien Latar Belakang */
+body {
+  margin: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: linear-gradient(135deg, #2c3e50 0%, #34495e 100%); /* Gradien gelap yang elegan */
+  min-height: 100vh;
+  color: #ecf0f1; /* Warna teks default yang terang */
+  display: flex;
+  justify-content: center; /* Memusatkan konten utama di tengah halaman */
+  align-items: flex-start; /* Memposisikan konten di bagian atas */
+}
+
+/* App Container */
+.App {
+  width: 100%;
+  max-width: 1200px; /* Batasi lebar maksimum aplikasi */
+  padding: 20px;
+  box-sizing: border-box; /* Pastikan padding tidak menambah lebar */
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Memastikan header dan main content terpusat */
+}
+
+/* App Header (Bagian Pencarian Film) */
+.App-header {
+  background-color: #34495e; /* Warna latar belakang header */
+  padding: 30px 20px; /* Padding lebih besar */
+  border-radius: 12px; /* Sudut lebih membulat */
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4); /* Bayangan lebih kuat */
+  margin-bottom: 40px;
+  max-width: 500px; /* Batasi lebar header */
+  width: 100%;
+  text-align: center;
+  color: #ecf0f1;
+}
+
+/* Judul Header */
+.App-header h1 {
+  font-size: 2.5em; /* Ukuran font lebih besar */
+  margin-top: 0;
+  margin-bottom: 25px; /* Jarak bawah judul */
+  color: #61dafb; /* Warna aksen untuk judul */
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+/* Form Pencarian */
+.App-header form {
+  display: flex;
+  flex-wrap: wrap; /* Izinkan wrap pada layar kecil */
+  justify-content: center;
+  align-items: center;
+  gap: 15px; /* Jarak antar input dan tombol */
+}
+
+/* Input Teks Pencarian */
+.App-header input[type="text"] {
+  padding: 12px 18px;
+  border: 1px solid #555;
+  border-radius: 25px; /* Lebih membulat */
+  font-size: 1.1em;
+  background-color: #4a627a; /* Warna background input */
+  color: #ecf0f1;
+  outline: none; /* Hilangkan outline default */
+  flex-grow: 1; /* Biarkan input mengambil ruang */
+  max-width: 300px;
+  box-shadow: inset 0 2px 5px rgba(0, 0, 0, 0.2);
+  transition: all 0.3s ease;
+}
+
+.App-header input[type="text"]::placeholder {
+  color: #bbb;
+}
+
+.App-header input[type="text"]:focus {
+  border-color: #61dafb; /* Warna border saat fokus */
+  box-shadow: 0 0 0 3px rgba(97, 218, 251, 0.5); /* Efek glow saat fokus */
+}
+
+/* Tombol Cari */
+.App-header button {
+  padding: 12px 25px;
+  background-color: #61dafb; /* Warna aksen */
+  border: none;
+  border-radius: 25px; /* Lebih membulat */
+  color: #282c34; /* Warna teks tombol */
+  font-size: 1.1em;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  white-space: nowrap; /* Cegah teks tombol wrapping */
+}
+
+.App-header button:hover {
+  background-color: #4db3e7; /* Warna saat hover */
+  transform: translateY(-2px); /* Efek angkat saat hover */
+}
+
+.App-header button:disabled {
+  background-color: #888;
+  cursor: not-allowed;
+  transform: none;
+}
+
+/* Main Content Area (Untuk Hasil Film dan Pesan) */
+.App-main {
+  padding: 20px;
+  width: 100%;
+  text-align: center;
+  color: #ecf0f1; /* Warna teks untuk pesan */
+}
+
+/* Pesan Loading/Error/Tidak Ditemukan */
+.App-main p {
+  font-size: 1.2em;
+  margin-top: 20px;
+  color: #fff; /* Warna teks untuk pesan */
+}
+
+.App-main p.error {
+  color: #ff6b6b; /* Warna merah untuk pesan error */
+  font-weight: bold;
+}
+
+/* Container Film (Grid Hasil Pencarian) */
+.movies-container {
+  display: grid; /* Menggunakan grid untuk tata letak yang fleksibel */
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); /* Kolom responsif */
+  gap: 30px; /* Jarak antar kartu */
+  justify-content: center; /* Memusatkan grid */
+  padding-top: 20px;
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto; /* Memusatkan kontainer film */
+}
+
+/* Kartu Film Individual */
+.movie-card {
+  background-color: #3f5872; /* Latar belakang kartu lebih terang dari header */
+  border-radius: 12px;
+  padding: 15px;
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  overflow: hidden; /* Pastikan konten tidak keluar dari kartu */
+}
+
+.movie-card:hover {
+  transform: translateY(-5px); /* Efek angkat saat hover */
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.4);
+}
+
+/* Gambar Poster Film */
+.movie-card img {
+  max-width: 100%;
+  height: 300px; /* Tinggi tetap untuk gambar */
+  object-fit: cover; /* Pastikan gambar mengisi area tanpa distorsi */
+  border-radius: 8px; /* Sudut gambar sedikit membulat */
+  margin-bottom: 15px;
+  border: 1px solid rgba(255, 255, 255, 0.1); /* Border tipis untuk gambar */
+}
+
+/* Jika Poster Tidak Tersedia */
+.movie-card .no-poster {
+  width: 100%;
+  min-height: 300px; /* Sesuaikan dengan tinggi gambar */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #4a627a; /* Warna background placeholder */
+  color: #bbb;
+  border-radius: 8px;
+  margin-bottom: 15px;
+  padding: 10px;
+  box-sizing: border-box;
+  font-style: italic;
+  font-size: 0.9em;
+  text-align: center;
+}
+
+/* Judul Film */
+.movie-card h2 {
+  font-size: 1.4em; /* Ukuran judul lebih besar */
+  margin-bottom: 8px;
+  margin-top: 0;
+  color: #61dafb; /* Warna judul film */
+  line-height: 1.3;
+}
+
+/* Tahun Rilis Film */
+.movie-card p {
+  font-size: 1em;
+  color: #bdc3c7; /* Warna tahun film */
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+/* Media Queries untuk Responsif (Penyesuaian di Layar Kecil) */
+@media (max-width: 768px) {
+  .App-header {
+    margin-top: 30px;
+    padding: 25px 15px;
+  }
+
+  .App-header h1 {
+    font-size: 2em;
+    margin-bottom: 20px;
+  }
+
+  .App-header form {
+    flex-direction: column; /* Tumpuk input dan tombol secara vertikal */
+    gap: 10px;
+  }
+
+  .App-header input[type="text"] {
+    width: 100%; /* Lebar penuh */
+    max-width: none; /* Hilangkan batas max-width */
+  }
+
+  .App-header button {
+    width: 100%; /* Lebar penuh */
+  }
+
+  .movies-container {
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); /* Kolom lebih kecil */
+    gap: 20px;
+  }
+
+  .movie-card img, .movie-card .no-poster {
+    height: 250px; /* Kurangi tinggi gambar */
+    min-height: 250px;
+  }
+}
+
+@media (max-width: 480px) {
+  .App {
+    padding: 10px;
+  }
+
+  .App-header {
+    margin-top: 20px;
+  }
+
+  .App-header h1 {
+    font-size: 1.8em;
+  }
+}
