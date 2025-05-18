@@ -4,12 +4,11 @@ Pengguna dapat mengetikkan judul film, lalu aplikasi akan menampilkan detail sep
 
 🔍 Fitur Utama
 - Cari film berdasarkan judul.
-- Tampilkan informasi lengkap seperti:
+- Tampilkan informasi seperti:
   ~Poster film
   ~Tahun rilis
-  ~Rating IMDb
 
-🛠 Teknologi
+🛠 Teknologi: 
 HTML
 CSS
 JavaScript
