@@ -246,4 +246,55 @@ body {
   .App-header h1 {
     font-size: 1.8em;
   }
+
+.movie-card.selected {
+  transform: scale(1.02);
+  background-color: #4a627a;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.5);
+}
+
+.movie-details {
+  margin-top: 15px;
+  padding-top: 15px;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  width: 100%;
+  text-align: left;
+}
+
+.movie-details .plot {
+  font-size: 0.9em;
+  line-height: 1.5;
+  color: #ecf0f1;
+  margin-bottom: 10px;
+}
+
+.movie-meta.vertical {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  font-size: 0.9em;
+  color: #bdc3c7;
+}
+
+.movie-meta.vertical p {
+  margin: 0;
+}
+
+
+.movie-meta span {
+  display: inline-flex;
+  align-items: center;
+}
+
+.movie-meta span:not(:last-child)::after {
+  content: "•";
+  margin-left: 8px;
+  margin-right: 8px;
+  color: rgba(255, 255, 255, 0.3);
+}
+
+.movie-meta span:first-child {
+  color: #f5c518;
+  font-weight: bold;
+}
 }
