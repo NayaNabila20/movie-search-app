@@ -15,6 +15,6 @@ A simple React-based movie search app that uses the [OMDb API](https://www.omdba
 ## 🛠️ Built With
 
 - [React]
-- [React Router DOM](https://reactrouter.com/)
+- [React Router DOM]
 - [OMDb API]
 - JavaScript, CSS, HTML
