@@ -1,4 +1,3 @@
-/* Global */
 body {
   margin: 0;
   font-family: 'Segoe UI', sans-serif;
@@ -103,7 +102,7 @@ body {
 }
 
 .movie-card img {
-  width: auto;
+  width: 200px;
   height: 300px;
   object-fit: cover;
   border-radius: 8px;
@@ -200,15 +199,12 @@ body {
   .App-header h1 {
     font-size: 2em;
   }
-
   .App-header form {
     flex-direction: column;
   }
-
   .App-header input {
     width: 100%;
   }
-
   .favorite-actions {
     flex-direction: column;
   }
