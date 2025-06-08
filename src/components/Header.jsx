@@ -2,7 +2,7 @@ import React from 'react';
 
 const Header = () => (
   <header className="App-header">
-    <h1>Movie App</h1>
+    <h1>Movie Search</h1>
   </header>
 );
 
